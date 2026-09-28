@@ -1,0 +1,17 @@
+numpy
+pandas
+scipy
+librosa
+soundfile
+matplotlib
+seaborn
+scikit-learn
+torch
+torchvision
+torchaudio
+tqdm
+jupyter
+kaggle
+grad-cam
+gradio
+pyyaml

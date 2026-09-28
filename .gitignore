@@ -1,0 +1,39 @@
+# Datasets (never commit raw or processed audio)
+data/raw/*
+data/processed/*
+!data/raw/coughvid/.gitkeep
+!data/raw/icbhi/.gitkeep
+!data/processed/.gitkeep
+
+# Models / large artifacts
+models/*
+!models/.gitkeep
+*.pt
+*.pth
+*.h5
+*.ckpt
+
+# Results (regenerate, don't version-control blobs; keep folders)
+results/figures/*
+results/metrics/*
+results/gradcam/*
+!results/figures/.gitkeep
+!results/metrics/.gitkeep
+!results/gradcam/.gitkeep
+
+# Secrets
+.env
+kaggle.json
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
