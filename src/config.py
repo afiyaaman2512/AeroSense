@@ -28,7 +28,9 @@ ON_KAGGLE = KAGGLE_INPUT.exists()
 if ON_KAGGLE:
     _cv = KAGGLE_INPUT / "orvile" / "coughvid-v3"
     COUGHVID_AUDIO_DIR = _cv / "public_dataset_v3" / "coughvid_20211012"
-    COUGHVID_EXPERT_CSV = _cv / "tabular_form" / "tabular_form" / "filtered_expert_labels_coughvid_v3.csv"
+    COUGHVID_TABULAR_DIR = _cv / "tabular_form" / "tabular_form"
+    COUGHVID_EXPERT_CSV = COUGHVID_TABULAR_DIR / "filtered_expert_labels_coughvid_v3.csv"
+    COUGHVID_FULL_CSV = COUGHVID_TABULAR_DIR / "coughvid_v3.csv"
 
     _ic = (KAGGLE_INPUT / "vbookshelf" / "respiratory-sound-database"
            / "Respiratory_Sound_Database" / "Respiratory_Sound_Database")
@@ -38,6 +40,7 @@ else:
     # Local layout after running download_*.py — adjust if your unzip differs.
     COUGHVID_AUDIO_DIR = COUGHVID_RAW_DIR
     COUGHVID_EXPERT_CSV = COUGHVID_RAW_DIR / "filtered_expert_labels_coughvid_v3.csv"
+    COUGHVID_FULL_CSV = COUGHVID_RAW_DIR / "coughvid_v3.csv"
     ICBHI_AUDIO_DIR = ICBHI_RAW_DIR
     ICBHI_DIAGNOSIS_CSV = ICBHI_RAW_DIR / "patient_diagnosis.csv"
 
